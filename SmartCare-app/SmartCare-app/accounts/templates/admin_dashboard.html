@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #212529;
+        }
+        .dashboard-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .dashboard-welcome {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #30708a;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        .action-links {
+            color: #495057;
+        }
+        .action-links a.update-link {
+            color: #28a745;
+        }
+        .action-links a.delete-link {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <h1>Admin Dashboard</h1>
+    </div>
+    <div class="dashboard-welcome">
+        <p><b>Welcome to the admin dashboard. Manage users, roles, and system settings from here.</b></p>
+    </div>
+    <!-- accounts/templates/accounts/admin_dashboard.html -->
+    {% if users %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td class="action-links">
+                <a href="{% url 'update_user' user.id %}" class="update-link">Update</a> |
+                <a href="{% url 'delete_user' user.id %}" class="delete-link">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p style="text-align: center;">No users found.</p>
+    {% endif %}
+    <button type="button" onclick="location.href='{% url 'logout' %}'">Logout</button>
+
+
+
+</body>
+</html>

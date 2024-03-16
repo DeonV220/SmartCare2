@@ -1,0 +1,199 @@
+/* styles.css
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #333;
+    margin-top: 50px;
+}
+
+button {
+    background-color: #696969;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #808080;
+}
+
+/* Add spacing between input fields */
+form input {
+    margin-bottom: 10px;
+}
+
+/* table borders and */
+table {
+    width: 100%;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+th,td {
+    padding: 10px;
+    text-align: center;
+}
+
+table, td, th {  
+    border: 1px solid #ddd;
+}
+
+*/
+
+ body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #333;
+    margin-top: 50px;
+}
+
+button {
+    background-color: #696969;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #808080;
+}
+
+/* Add spacing between input fields */
+form input {
+    margin-bottom: 10px;
+}
+
+/* styles.css */
+
+.patient-dash-navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+.patient-dash-navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.patient-dash-navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.patient-dash-navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.patient-dash-navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.patient-info-container {
+    border: 2px solid #333;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    margin-left: 20px;
+    max-width: 600px;
+}
+
+.patient-info-container ul {
+    list-style-type: none; /* Remove bullet points */
+}
+
+h3 {
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Arrange buttons in a column */
+    align-items: flex-end; /* Align buttons to the right */
+    justify-content: flex-start; /* Align buttons to the top */
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.button-container button {
+    margin-top: 10px; /* Add some space between buttons */
+}
+
+.invoice-button {
+    display: flex;
+    flex-direction: column; /* Arrange buttons in a column */
+    align-items: flex-start; /* Align buttons to the right */
+    justify-content: flex-start; /* Align buttons to the top */
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.invoice-button {
+    margin-top: 10px; /* Add some space between buttons */
+}
+
+
+/* table */
+
+table {
+    border-collapse: collapse; /* Ensure cells are adjacent */
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #dddddd; /* Add borders to cells */
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2; /* Add background color to header cells */
+}
+
+/* Rest of your CSS styles */
+
+.print-invoice-button {
+    display: flex;
+    flex-direction: column; /* Arrange buttons in a column */
+    align-items: flex-start; /* Align buttons to the right */
+    justify-content: flex-start; /* Align buttons to the top */
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.print-invoice-button {
+    margin-top: 10px; /* Add some space between buttons */
+}

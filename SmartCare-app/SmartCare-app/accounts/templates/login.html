@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px; /* You can adjust this width to fit your design */
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666; /* Adjusted label color for better readability */
+        }
+        input[type="email"],
+        input[type="password"],
+        button[type="submit"],
+        button[type="button"] { /* Added button[type="button"] for signup button */
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button[type="submit"],
+        button[type="button"] { /* Added button[type="button"] for consistent styling */
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover,
+        button[type="button"]:hover { /* Added button[type="button"]:hover for consistent hover effect */
+            background-color: #45a049;
+        }
+        p {
+            color: #f00;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="">
+        <h2>Login</h2>
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="email">Email:</label>
+            {{ form.email }}
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            {{ form.password }}
+        </div>
+        <button type="submit">Login</button>
+        <!-- Add a button for signing up inside the form for consistent styling -->
+        <button type="button" onclick="location.href='{% url 'signup' %}'">Signup</button>
+        {% if error_message %}
+            <p><strong>{{ error_message }}</strong></p>
+        {% endif %}
+    </form>
+</body>
+</html>
